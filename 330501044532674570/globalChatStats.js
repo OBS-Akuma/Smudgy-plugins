@@ -3,7 +3,7 @@
 // @description  Add (price) in global chat after each [item], and some trade stats if the offering is good or bad. Also add price to items in Market, Inventory, and also have a Inventory total value per section.
 // @version      0.54
 // @author       SheriffCarry, skywalk
-// @github       unknown
+// @github       https://raw.githubusercontent.com/OBS-Akuma/Smudgy-plugins/refs/heads/main/330501044532674570/globalChatStats.js
 // ==/UserScript==
 let priceList = {};
 const mappingConfigs = {
