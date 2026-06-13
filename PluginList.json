@@ -1,8 +1,15 @@
 [
   {
     "path": "330501044532674570",
-    "utd": [
-      "globalChatStats.js"
+    "scripts": [
+      {
+        "name": "globalChatStats.js",
+        "version": "v0.54"
+      },
+      {
+        "name": "test.js",
+        "version": "v0.4"
+      }
     ]
   }
 ]
