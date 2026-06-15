@@ -34,5 +34,14 @@
         "version": "v0.0.1"
       }
     ]
+  },
+  {
+    "path": "619377929951903754",
+    "scripts": [
+      {
+        "name": "Ranked_Utils.js",
+        "version": "v0.0.1"
+      }
+    ]
   }
 ]
