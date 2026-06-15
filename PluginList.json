@@ -7,5 +7,14 @@
         "version": "v0.54"
       }
     ]
+  },
+  {
+    "path": "1328040337393975322",
+    "scripts": [
+      {
+        "name": "ShowOnlyKnife.js",
+        "version": "v1.8.2"
+      }
+    ]
   }
 ]
