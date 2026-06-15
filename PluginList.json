@@ -16,5 +16,14 @@
         "version": "v1.8.2"
       }
     ]
+  },
+  {
+    "path": "1330286122198110290",
+    "scripts": [
+      {
+        "name": "Numberformatter.js",
+        "version": "v0.0.1"
+      }
+    ]
   }
 ]
