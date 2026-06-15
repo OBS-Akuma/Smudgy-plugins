@@ -47,5 +47,14 @@
         "version": "v0.0.1"
       }
     ]
+  },
+  {
+    "path": "1003936286513582202",
+    "scripts": [
+      {
+        "name": "KirkaIgnoreList.js",
+        "version": "v0.0.73"
+      }
+    ]
   }
 ]
