@@ -71,6 +71,10 @@
       {
         "name": "lvl2klo.js",
         "version": "0.0.1"
+      },
+      {
+        "name": "ChatCounter.js",
+        "version": "0.0.1"
       }
     ]
   }
