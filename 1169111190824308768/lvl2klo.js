@@ -45,7 +45,7 @@
                 const label = document.createElement('div');
                 label.setAttribute('data-v-00ce7b25', '');
                 label.className = 'klo';
-                label.textContent = 'klo';
+                label.textContent = 'srp';
                 newDiv.appendChild(label);
                 
                 levels.parentNode.replaceChild(newDiv, levels);
