@@ -75,6 +75,10 @@
       {
         "name": "ChatCounter.js",
         "version": "0.0.1"
+      },
+      {
+        "name": "ServerCopyButton.js",
+        "version": "0.0.3"
       }
     ]
   }
