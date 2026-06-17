@@ -2,7 +2,7 @@
 // @name         Inventory Selected Items Sorter
 // @version      0.0.2
 // @description  Moves selected inventory items to the top of the list
-// @author       protox
+// @author       Akuma
 // @github       https://raw.githubusercontent.com/OBS-Akuma/Smudgy-plugins/refs/heads/main/1169111190824308768/InventorySorter.js
 // ==/UserScript==
 
