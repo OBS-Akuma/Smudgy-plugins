@@ -79,6 +79,10 @@
       {
         "name": "ServerCopyButton.js",
         "version": "0.0.3"
+      },
+      {
+        "name": "InventorySorter.js",
+        "version": "0.0.2"
       }
     ]
   }
