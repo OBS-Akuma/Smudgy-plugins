@@ -9,9 +9,27 @@
 (function() {
     'use strict';
 
+    let isSetup = false;
+
     function setupChatCounter() {
         const inputField = document.querySelector('input.input[type="text"]');
         if (!inputField) return;
+
+        if (isSetup) {
+            const existingButton = document.querySelector('.info-key-cont.enter');
+            if (existingButton) {
+                const textLength = inputField.value.length;
+                existingButton.textContent = textLength.toString();
+                if (textLength >= 80) {
+                    existingButton.style.color = '#ff0000';
+                    existingButton.style.fontWeight = 'bold';
+                } else {
+                    existingButton.style.color = '';
+                    existingButton.style.fontWeight = '';
+                }
+            }
+            return;
+        }
 
         let enterButton = document.querySelector('.info-key-cont.enter');
         if (!enterButton) {
@@ -86,6 +104,7 @@
         }
         
         updateButtonText();
+        isSetup = true;
     }
 
     window.addEventListener('load', setupChatCounter);
