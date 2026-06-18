@@ -32,7 +32,7 @@ setInterval(async () => {
         
         for (let quest of quests) {
             if (quest.wmNnWWwM && quest.wmNnWWwM.wmWWNwn === true && !quest.wmNnWWwM.wWNmnwWM) {
-                let claimQuest = await fetch("https://api.kirka.io/api/rewards/take", {
+                let claimQuest = await fetch("https://api2.kirka.io/api/wMWWmnNw/wNmwWMW", {
                     "headers": {
                         "accept": "application/json, text/plain, */*",
                         "authorization": "Bearer " + localStorage.getItem("token"),
