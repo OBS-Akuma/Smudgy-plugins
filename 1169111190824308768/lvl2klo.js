@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Kirka KLO Display
-// @version      0.0.2
+// @version      0.0.7
 // @description  Replace level with KLO from API (kirka api)
 // @author       Akuma
 // @github       https://raw.githubusercontent.com/OBS-Akuma/Smudgy-plugins/refs/heads/main/1169111190824308768/lvl2klo.js
@@ -12,6 +12,8 @@
     let lastKLO = null;
     let lastUsername = null;
     let currentLevelsElement = null;
+    let debounceTimer = null;
+    let observer = null;
 
     const SELECTORS = {
         username: '[data-v-63a0c208][data-v-e3674cae].username',
@@ -65,21 +67,38 @@
                 })
             });
 
+            if (!res.ok) {
+                throw new Error(`HTTP error! status: ${res.status}`);
+            }
+
             const data = await res.json();
-            const klo = Math.round(data.wWwnNmMW);
+            
+            let klo = 0;
+            if (data.wnNwWmM && data.wnNwWmM.wwmWnNM !== undefined) {
+                klo = Math.round(data.wnNwWmM.wwmWnNM);
+            } else if (data.wwmWnNM !== undefined) {
+                klo = Math.round(data.wwmWnNM);
+            } else if (data.klo !== undefined) {
+                klo = Math.round(data.klo);
+            } else if (data.level !== undefined) {
+                klo = Math.round(data.level);
+            } else if (data.wNmnw !== undefined) {
+                klo = data.wNmnw;
+            }
             
             lastUsername = name;
             lastKLO = klo;
             
             updateDisplay(klo);
         } catch (error) {
+            // Silent fail
         }
     }
 
     function updateDisplay(klo) {
         const levels = document.querySelector(SELECTORS.levels);
         if (!levels) return;
-        if (currentLevelsElement === levels && levels.textContent.includes(klo)) {
+        if (currentLevelsElement === levels && levels.textContent.includes(String(klo))) {
             return;
         }
 
@@ -88,7 +107,6 @@
         currentLevelsElement = newElement;
     }
 
-    let debounceTimer = null;
     function scheduleUpdate() {
         if (debounceTimer) {
             clearTimeout(debounceTimer);
@@ -98,7 +116,7 @@
             debounceTimer = null;
         }, 100);
     }
-    let observer = null;
+
     function setupObserver() {
         if (observer) {
             observer.disconnect();
@@ -138,6 +156,7 @@
     }
 
     setInterval(getKLO, 5000);
+    
     window.addEventListener('beforeunload', () => {
         if (observer) {
             observer.disconnect();
@@ -146,4 +165,5 @@
             clearTimeout(debounceTimer);
         }
     });
+
 })();
