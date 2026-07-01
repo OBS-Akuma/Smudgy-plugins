@@ -31,15 +31,6 @@
     ]
   },
   {
-    "path": "814588499827097650",
-    "scripts": [
-      {
-        "name": "Playercount.js",
-        "version": "v0.0.1"
-      }
-    ]
-  },
-  {
     "path": "619377929951903754",
     "scripts": [
       {
@@ -87,6 +78,10 @@
       {
         "name": "SendLinkToChat.js",
         "version": "0.0.7"
+      },
+      {
+        "name": "PlayerCount.js",
+        "version": "0.0.2"
       }
     ]
   }
